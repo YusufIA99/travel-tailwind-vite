@@ -26,7 +26,7 @@ function Hero() {
           </div>
           <div>
             <button className="flex items-center justify-center rounded-md bg-blue-500 p-2">
-              <FaSearch className="mr-2" />
+              <FaSearch className="" />
             </button>
           </div>
         </form>
