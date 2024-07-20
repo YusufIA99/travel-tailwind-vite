@@ -6,8 +6,21 @@ import Gramado from '../assets/Gramado.png';
 
 function Destinations() {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-center mb-8">Top Destinations</h2>
+    <div className="bg-teal-500 p-4">
+     
+    <div className="text-center p-10">
+      <h1 className="text-3xl font-bold text-white" >
+        <span className="text-yellow-500">Top</span> <br></br> Destinations
+      </h1>
+      <p className="mt-4 text-white">
+        It’s hard enough deciding to move, you don’t have to worry about where to move <br></br> to.
+        These are some of the most popular and best locations to move to based on a <br></br> number of factors.
+      </p>
+    </div>
+  
+
+
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <div className="relative">
           <img src={Paraty} alt="Paraty" className="w-[310px] h-[553px] object-cover rounded-lg shadow-lg"/>
