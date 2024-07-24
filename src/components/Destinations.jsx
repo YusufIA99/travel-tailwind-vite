@@ -16,9 +16,9 @@ function Destinations() {
           These are some of the most popular and best locations to move to based on a <br></br> number of factors.
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-10">
         {[Paraty, Olinda, Morettes, Gramado].map((image, index) => (
-          <div key={index} className="relative w-[310px] h-[553px] rounded-lg shadow-lg">
+          <div key={index} className="relative rounded-lg shadow-lg">
             <img src={image} alt={`Destination ${index}`} className="w-full h-full object-cover rounded-lg" />
             <div className="absolute bottom-0 left-0 p-4 w-full h-full bg-gradient-to-t from-black to-transparent rounded-lg flex flex-col justify-end">
               <h1 className="text-white">{['Paraty', 'Olinda', 'Morettes', 'Gramado'][index]}</h1>

@@ -13,6 +13,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Navbar />
     <Hero />
     <Destinations />
-    <Morelocations />>
+    <Morelocations />
   </React.StrictMode>,
 )
