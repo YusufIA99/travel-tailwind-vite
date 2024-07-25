@@ -7,7 +7,7 @@ import Norway from '../assets/Norway.png';
 function Morelocations() {
   return (
     <div>
-      <div className="text-center p-10">
+      <div id='Morelocations' className="text-center p-10">
         <h1 className="text-4xl font-bold text-black">
           <span className="text-teal-500">More</span> <br /> Destinations
         </h1>

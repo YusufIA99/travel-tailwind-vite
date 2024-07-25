@@ -36,13 +36,13 @@ function Navbar() {
         }`}
       >
         <li>
-          <a href="#">Home</a>
+          <a href="#Hero">Home</a>
         </li>
         <li>
-          <a href="#">Deals</a>
+          <a href="#Destination">Destinations</a>
         </li>
         <li>
-          <a href="#">Explore</a>
+          <a href="#Morelocations">Explore</a>
         </li>
         <li>
           <a href="#">Resources</a>
