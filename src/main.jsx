@@ -5,7 +5,6 @@ import './index.css'
 import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
 import Destinations from './components/Destinations.jsx'
-import Morelocations from './components/Morelocations.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -13,6 +12,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Navbar />
     <Hero />
     <Destinations />
-    <Morelocations />
   </React.StrictMode>,
 )
