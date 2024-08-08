@@ -26,7 +26,10 @@ function Hero() {
   };
 
   return (
-    <div id="Hero" className="relative flex h-screen w-full flex-col items-center justify-center">
+    <div
+      id="Hero"
+      className="relative flex h-screen w-full flex-col items-center justify-center"
+    >
       <video
         className="absolute h-full w-full object-cover"
         src={hero_video}
@@ -36,7 +39,9 @@ function Hero() {
       ></video>
       <div className="absolute left-0 top-0 h-full w-full bg-gray-900/50"></div>
       <div className="z-10 space-y-6 p-6 text-center text-white">
-        <h1 className="text-6xl font-extrabold drop-shadow-lg">Welcome to Relocate</h1>
+        <h1 className="text-6xl font-extrabold drop-shadow-lg">
+          Welcome to Relocate
+        </h1>
         <p className="text-2xl font-light drop-shadow-md">Discover any place</p>
         <div className="relative flex items-center justify-center">
           <form
@@ -63,21 +68,40 @@ function Hero() {
           </form>
         </div>
         {errorMessage && (
-          <div className="mt-6 bg-red-500 p-4 rounded-lg text-white shadow-lg">
+          <div className="mt-6 rounded-lg bg-red-500 p-4 text-white shadow-lg">
             <p>{errorMessage}</p>
           </div>
         )}
-       {countryData && (
-  <div className="mt-6 bg-white p-6 rounded-lg text-black shadow-lg">
-    <h2 className="text-3xl font-bold">{countryData.name.common}</h2>
-    <div className="flex justify-center mt-4">
-      <img src={countryData.flags.svg} alt={`${countryData.name.common} flag`} className="w-32 h-20" />
-    </div>
-    <p className="text-lg">Capital: {countryData.capital}</p>
-    <p className="text-lg">Region: {countryData.region}</p>
-    <p className="text-lg">Population: {countryData.population.toLocaleString()}</p>
-  </div>
-)}
+        {countryData && (
+          <div className="mt-6 rounded-lg bg-white p-6 text-black shadow-lg">
+            <h2 className="text-3xl font-bold">{countryData.name.common}</h2>
+            <div className="mt-4 flex justify-center">
+              <img
+                src={countryData.flags.svg}
+                alt={`${countryData.name.common} flag`}
+                className="h-20 w-32"
+              />
+            </div>
+            <p className="text-lg">Capital: {countryData.capital}</p>
+            <p className="text-lg">Region: {countryData.region}</p>
+            <p className="text-lg">Subregion: {countryData.subregion}</p>
+            <p className="text-lg">
+              Population: {countryData.population.toLocaleString()}
+            </p>
+            <p className="text-lg">
+              Area: {countryData.area.toLocaleString()} km²
+            </p>
+            <p className="text-lg">
+              Languages: {Object.values(countryData.languages).join(", ")}
+            </p>
+            <p className="text-lg">
+              Currencies:{" "}
+              {Object.values(countryData.currencies)
+                .map((currency) => currency.name)
+                .join(", ")}
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );
