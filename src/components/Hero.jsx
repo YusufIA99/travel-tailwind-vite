@@ -38,11 +38,11 @@ function Hero() {
         muted
       ></video>
       <div className="absolute left-0 top-0 h-full w-full bg-gray-900/50"></div>
-      <div className="z-10 space-y-6 p-6 text-center text-white">
-        <h1 className="text-6xl font-extrabold drop-shadow-lg">
+      <div className="z-10 mx-auto max-w-4xl space-y-6 p-6 text-center text-white">
+        <h1 className="text-4xl md:text-6xl font-extrabold drop-shadow-lg">
           Welcome to Relocate
         </h1>
-        <p className="text-2xl font-light drop-shadow-md">Discover any place</p>
+        <p className="text-xl md:text-2xl font-light drop-shadow-md">Discover any place</p>
         <div className="relative flex items-center justify-center">
           <form
             onSubmit={handleSearch}
@@ -73,28 +73,28 @@ function Hero() {
           </div>
         )}
         {countryData && (
-          <div className="mt-6 rounded-lg bg-white p-6 text-black shadow-lg">
-            <h2 className="text-3xl font-bold">{countryData.name.common}</h2>
+          <div className="mx-auto mt-6 max-w-2xl rounded-lg bg-white p-6 text-black shadow-lg">
+            <h2 className="text-2xl md:text-3xl font-bold">{countryData.name.common}</h2>
             <div className="mt-4 flex justify-center">
               <img
                 src={countryData.flags.svg}
                 alt={`${countryData.name.common} flag`}
-                className="h-20 w-32"
+                className="h-16 w-24 md:h-20 md:w-32"
               />
             </div>
-            <p className="text-lg">Capital: {countryData.capital}</p>
-            <p className="text-lg">Region: {countryData.region}</p>
-            <p className="text-lg">Subregion: {countryData.subregion}</p>
-            <p className="text-lg">
+            <p className="text-base md:text-lg">Capital: {countryData.capital}</p>
+            <p className="text-base md:text-lg">Region: {countryData.region}</p>
+            <p className="text-base md:text-lg">Subregion: {countryData.subregion}</p>
+            <p className="text-base md:text-lg">
               Population: {countryData.population.toLocaleString()}
             </p>
-            <p className="text-lg">
+            <p className="text-base md:text-lg">
               Area: {countryData.area.toLocaleString()} km²
             </p>
-            <p className="text-lg">
+            <p className="text-base md:text-lg">
               Languages: {Object.values(countryData.languages).join(", ")}
             </p>
-            <p className="text-lg">
+            <p className="text-base md:text-lg">
               Currencies:{" "}
               {Object.values(countryData.currencies)
                 .map((currency) => currency.name)
