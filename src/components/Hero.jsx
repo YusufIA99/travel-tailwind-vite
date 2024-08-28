@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import hero_video from "../assets/hero_video.mp4";
+import hero_poster from "../assets/hero_poster.jpg"; // Add a poster image
 import { FaSearch } from "react-icons/fa";
 
 function Hero() {
@@ -33,13 +34,15 @@ function Hero() {
       <video
         className="absolute h-full w-full object-cover"
         src={hero_video}
+        poster={hero_poster} // Add poster attribute
         autoPlay
         loop
         muted
+        loading="lazy" // Add lazy loading
       ></video>
       <div className="absolute left-0 top-0 h-full w-full bg-gray-900/50"></div>
       <div className="z-10 mx-auto max-w-4xl space-y-6 p-6 text-center text-white">
-        <h1 className="text-4xl md:text-6xl font-extrabold drop-shadow-lg">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold drop-shadow-lg">
           Welcome to Relocate
         </h1>
         <p className="text-xl md:text-2xl font-light drop-shadow-md">Discover any place</p>
